@@ -4,6 +4,7 @@ Batch script to render blender files in the background on windows devices. One m
 Useful Additions Include: 
 1. Start and End Time of Render
 2. Visible Frame by Frame Progress
+3. Errors for Incorrect Inputs
 
 ## Setup
 
