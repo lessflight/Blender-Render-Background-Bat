@@ -18,4 +18,6 @@ The setup is very simple:
 To use:
 1. Ensure that the target .blend file is adequately set up. You are happy with the scene, frame range and output location
 2. Double Click on BlenderRenderBack.bat to run the script
-3. 
+
+
+## Limitations/Issues
