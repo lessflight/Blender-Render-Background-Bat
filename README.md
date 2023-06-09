@@ -20,4 +20,9 @@ To use:
 2. Double Click on BlenderRenderBack.bat to run the script
 
 
-## Limitations/Issues
+## Limitations, Issues, Troubleshooting
+1. If Input is Less Than 8 Characters Script Will Crash
+2. If Input Contains an Unclosed Quotation Mark, Script Will Crash
+3. Inputed File Cannot Contain a Space in its Name. 
+  This Will Lead to an "Error: Cannot read file 'D:\user...' at the Top of the Console
+  but a Positive Render Message Below
