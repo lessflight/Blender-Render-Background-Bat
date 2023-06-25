@@ -1,14 +1,28 @@
 @echo off
 
+::est. environment
+title The Blender Render Background Bat
+mode con: cols=62 lines=30
+color 06
+
+
+:: >>>>REPLACE WITH YOUR LOCATION OF BLENDER.EXE ON LINE BELOW<<<<
 set blender.exe_Location="D:\Program Files\Blender Foundation\Blender 3.2\blender.exe"
-:: REPLACE WITH YOUR LOCATION OF BLENDER.EXE
+:: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 set border=--------------------------------------------------------------
 :: Text Asset
 
-echo -----WELCOME TO +THE BLENDER RENDER BACKGROUND BAT+ V.0.1-----
+::startup
+echo      welcome to  the blender render background bat  V.0.2     
+echo                 refer to readme.ms for setup
+(timeout /t 1)>nul
+cls
+echo -----WELCOME TO +THE BLENDER RENDER BACKGROUND BAT+ V.0.2-----
 echo               --Refer to README.MS for Setup--
 echo %border%
+(timeout /t 1)>nul
 echo .
 echo  .
 echo   .
@@ -23,13 +37,13 @@ echo or
 echo Manually Type with Quotation Marks
 echo (ex: "D:\user\Blender Projects\Example.blend")
 echo .
-
 set /p "LOC1=When Finished Hit ENTER: "
 
 set test1=%LOC1:~0,1%
 set test2=%LOC1:~-1%
 set combq=%test1%%test2%
 if not """"=="%combq%" (goto :quoteError)
+::IF INPUT DOES NOT CLOSE QUOTATION MARKS - PROGRAM WILL CRASH
 
 set last6=%LOC1:~-7,-1%
 if /i not ".blend"=="%last6%" (goto :blendError)
@@ -46,11 +60,14 @@ set startime=%time%
 
 %blender.exe_Location% -b "%LOC1%" -a
 echo %border%
+echo LOCATION:
+echo %LOC1%
 Echo RENDER IS COMPLETE
 goto :finish
 ::renders from prompted address
 
 :quoteError
+cls
 echo %border%
 echo ERROR ALPHA: %LOC1% IS NOT SURROUNDED BY "" MARKS
 echo .
@@ -64,6 +81,7 @@ goto :prompt
 ::presents error info and redirect to prompt
 
 :blendError
+cls
 echo %border%
 echo ERROR BRAVO: %LOC1% IS NOT A ".blend" FILE
 echo .
@@ -77,6 +95,7 @@ goto :prompt
 ::presents error info and redirect to prompt
 
 :existError
+cls
 echo %border%
 echo ERROR CHARLIE: %LOC1% DOES NOT EXIST OR IS A FOLDER
 echo .
@@ -115,12 +134,14 @@ if /i "y"=="%restart%" (goto :post)
 exit
 
 :post
-echo .
-echo  .
-echo   .
-echo  .
-echo .
+cls
 echo %border%
+goto :prompt
+
+::Thoughts for future dev
+:: add queing, multiline var output location, in house navigation to .bat file, 
+:: make blender location changeable
+:: Possible Additions: Queing, More Render Customization, Frame Render, In-house file navigation
 goto :prompt
 
 :: Possible Additions: Queing, More Render Customization, Frame Render, In-House File Navigation
