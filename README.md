@@ -11,7 +11,7 @@ Useful Additions Include:
 The setup is very simple:
 1. Download ZIP and Extract to Target Location
 2. Right Click BlenderRenderBack.bat and Choose to "Edit With Notepad"
-3. On Line 3 Enter File Path to Blender.exe Between the Quotation Marks
+3. On Line 10 Enter File Path to Blender.exe Between the Quotation Marks
 4. Save, Exit and now you can Click on BlenderRenderBack.bat to run the script
 
 ## Use
