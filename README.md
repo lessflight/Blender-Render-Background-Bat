@@ -1,5 +1,5 @@
 # Blender-Render-Background-Bat
-Batch script to render blender files in the background on windows devices. One might choose to use this script to render more stably, use less resources when rendering or have a less distracting interface to track the progress of one's render.
+Blender Render Bat is a batch script that was created to eliminate the need for coding to render Blender files in the background (with CMD) on Windows. One might choose to use this script to render more stably, use less resources when rendering or have a less distracting interface to track the progress of one's render.
 
 Useful Additions Include: 
 1. Start and End Time of Render
